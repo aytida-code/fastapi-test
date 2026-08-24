@@ -50,7 +50,7 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      DATABASE_URL: mysql+pymysql://orders_user:orders_password@mysql:3306/orders_db
+      DATABASE_URL: mysql+aiomysql://myuser:mypassword@localhost:3306/gen_7bc532ef5bfd_1
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
     ports:
       - "8000:8000"
@@ -66,7 +66,7 @@ services:
     command: ["python", "-m", "app.worker"]
     env_file: .env
     environment:
-      DATABASE_URL: mysql+pymysql://orders_user:orders_password@mysql:3306/orders_db
+      DATABASE_URL: mysql+aiomysql://myuser:mypassword@localhost:3306/gen_7bc532ef5bfd_1
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
     depends_on:
       mysql:

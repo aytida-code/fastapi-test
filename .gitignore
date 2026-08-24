@@ -4,6 +4,7 @@ __pycache__/
 .venv/
 venv/
 .env
+.env_0afcde1f6be381c2
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -13,3 +14,5 @@ mysql_data/
 .DS_Store
 .idea/
 .vscode/
+.code_index/
+*.pyc
